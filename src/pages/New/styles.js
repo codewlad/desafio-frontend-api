@@ -60,11 +60,6 @@ export const Form = styled.form`
         margin-bottom: 40px;
     }
 
-    button:first-child {
-        background-color: #0D0C0F;
-        color: ${({ theme }) => theme.COLORS.PINK};
-    }
-
     .tags {
         border-radius: 8px;
         padding: 16px;

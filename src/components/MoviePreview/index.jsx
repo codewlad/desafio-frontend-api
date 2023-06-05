@@ -1,8 +1,12 @@
 import { Container, Stars } from './styles';
 import { Tag } from '../Tag';
 import { AiFillStar, AiOutlineStar, AiOutlineClockCircle } from 'react-icons/ai'
+import { useAuth } from '../../hooks/auth'
+import { api } from "../../services/api";
 
 export function MoviePreview({ data, ...rest}) {
+    const { user } = useAuth();
+    const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder;
     
     return (
         <Container {...rest}>
@@ -17,12 +21,12 @@ export function MoviePreview({ data, ...rest}) {
 
             <div>
                 <img
-                    src="https://github.com/codewlad.png"
+                    src={avatarUrl}
                     alt="Foto do usuário"
                 />
-                <span>Por: Wladimir Gonçalves</span>
+                <span>Por: {user.name}</span>
                 <AiOutlineClockCircle />
-                <span>23/05/22 às 08:00</span>
+                <span>{data.created_at}</span>
             </div>
 
             {

@@ -35,10 +35,6 @@ function AuthProvider({ children }) {
         setData({});
     }
 
-    /* continuar daqui 
-    ** Aula: Atualizar o avatar do usuário
-    ** Tempo: 03:54 */
-
     async function updateProfile({ user, avatarFile }) {
         try {
 

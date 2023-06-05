@@ -24,6 +24,10 @@ export const Container = styled.div`
         &:placeholder {
             color: ${({ theme }) => theme.COLORS.GRAY_100};
         }
+
+        &:disabled {
+            opacity: 0.5;
+        }
     }
 
     > svg {
