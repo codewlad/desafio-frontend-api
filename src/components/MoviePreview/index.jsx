@@ -3,6 +3,7 @@ import { Tag } from '../Tag';
 import { AiFillStar, AiOutlineStar, AiOutlineClockCircle } from 'react-icons/ai'
 import { useAuth } from '../../hooks/auth'
 import { api } from "../../services/api";
+import avatarPlaceholder from '../../assets/avatar_placeholder.svg'
 
 export function MoviePreview({ data, ...rest}) {
     const { user } = useAuth();
